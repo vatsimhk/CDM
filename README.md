@@ -16,8 +16,8 @@ CTOT - Calculated Take Off Time, the given take off slot for the pilot, usually 
 
 ### Set up:
 1. Go to the Departure list, click "F"
-2. For CDC, Select TSAT, TTG, ASRT
-   For GMC, Select TTG (or TSAT if preferred)
+2. For CDC, Select TTG, ASRT
+   For GMC, Select TSAT, TTG
 3. For the controller covering CDC (or Hong Kong Departure flow manager VHHH_P_GND when approved by vACC directors), use command ".cdm master VHHH" to activate the system
 
 ### Procedure:
