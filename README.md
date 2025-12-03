@@ -26,7 +26,7 @@ CDM do calculation on the pilot submitted Target Off-block Time TOBT (or EOBT), 
 2. Keep the aircraft on your frequency and ask them to report ready for push and start / Or, when VHHH_P_GND is available, ask the pilot to report ready on VHHH_P_GND frequency
 3. When traffic has reported ready, check "TTG" column on the departure list. 
    - If green colour (-5 to +5) is shown, left-click ASRT, then send the traffic to GMC (if you see -6 on TTG, it is ok to just left click ASRT and send the pilot to GMC as it is just 1 minutes to go for his slot)
-   - If yellow colour (<-5) is shown, right-click ASRT, then send the traffic to GMC
+   - If yellow colour (<-5) is shown, right-click ASRT, then send the traffic to GMC (or <-6 as mentioned)
    - If no value is shown or "~", right-click ASRT, then send the traffic to GMC
 
 ### GMC
