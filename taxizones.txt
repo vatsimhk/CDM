@@ -1,1 +1,30 @@
+//T1C
+//NE (N5)
+//NW (N60)
+//WN (W67)
+//WS (W44)
+//SE (S11)
+//SW (S41)
+//NSAT (R16)
+
+//Midfield
+//GN (D206)
+//GS (D214)
+//RN (D303)
+//RS (D308)
+
+//Cargo
+//E (X18)
+//W (X5)
+
+//West Cargo
+//N (L424)
+//S (L434)
+
+//Maintenance
+//HAECO (M6)
+//CASL (M22)
+
+//BAC
+//GFS
 
