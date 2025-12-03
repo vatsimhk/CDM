@@ -30,7 +30,7 @@ CDM do calculation on the pilot submitted Target Off-block Time TOBT (or EOBT), 
    - If no value is shown or "~", right-click ASRT, then send the traffic to GMC
 
 ### GMC
-1. When the pilot requests push and start, check if "TTG" or "TSAT" is green in colour before issuing pushback clearance; If not, ask the pilot to stand by (or provide expected clearance time, TSAT)
+1. When the pilot requests push and start, check if "TTG" or "TSAT" is green in colour before issuing pushback clearance; If not, ask the pilot to stand by and report ready at TSAT
    - If you see traffic with TTG >+5, depending on the situation, you may still issue pushback clearance if it is not > +10)
    - If TTG is >+10, ask the pilot to refile a valid TOBT | [Callsign], your TOBT is invalid, update it and report ready again. or .tobt alias
 
