@@ -63,4 +63,6 @@ In case of a runway direction change:
 
 ### Ground Stop
 In case a ground stop is required:
-1.  **CDC** uses the command `.cdm startupdelay VHHH/(affected runway) (4-digit time in UTC)`. (Use the same format as the runway direction change delay command.)
+- **CDC** uses the command `.cdm startupdelay VHHH/(affected runway) (4-digit time in UTC)`. (Use the same format as the runway direction change delay command.)
+OR
+- **FMP** use Ground Stop flow measure in website dashboard
