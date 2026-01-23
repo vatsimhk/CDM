@@ -1,4 +1,4 @@
 #--- VHHK ---#
 VHHH,37
 VMMC,18
-VHHX,24
+VHHX,18
