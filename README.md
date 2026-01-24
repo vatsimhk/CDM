@@ -23,20 +23,21 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 1.  Go to the **Departure list** and click "**F**."
 2.  Select the required columns:
     * For **CDC**, select **TSAT, SLOT, ASRT**.
-3.  The controller covering **CDC** (or the Hong Kong Departure flow manager **VHHH_P_GND** when approved by **vACC directors**) uses the command `.cdm master VHHH` to activate the system or left-click VHHH on the CDM panel on Euroscope (Click once only and allow it to load for a while).
+3.  The controller covering **CDC** uses the command `.cdm master VHHH` to activate the system or left-click VHHH on the CDM panel on Euroscope (Click once only and allow it to load for a while).
 
 ---
 
 ### Procedure:
 ### CDC
 1.  Issue clearance as normal.
-2.  Keep the aircraft on your frequency and ask them to **report ready for push and start**. Alternatively, when **VHHH_P_GND** is available, ask the pilot to **report ready on the VHHH_P_GND frequency**.
-3.  When the traffic has reported ready, check the "**TTG**" column on the departure list.
-    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ASRT**, then send the traffic to **GMC**. (If you see $-6$ on **TTG**, it is okay to just left-click **ASRT** and send the pilot to **GMC** as it is only 1 minute until their slot.)
+2.  Keep the aircraft on your frequency and ask them to **report ready for push and start**.
+3.  When the traffic has reported ready, check the "**SLOT**" column on the departure list.
+    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ASRT**, then send the traffic to **GMC**. (If you see $-6$ on **SLOT**, it is okay to just left-click **ASRT** and send the pilot to **GMC** as it is only 1 minute until their slot.)
     * If the **yellow colour** ($<-5$) is shown, **right-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (minutes, e.g. 45 for XX:45z), call you back`
     * If no value is shown or "**~**" is displayed, **right-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (minutes, e.g. 45 for XX:45z), call you back`
-4.  You are strongly advised to issue clearance via PDC to maintain radio capacity, use the phraseology `(Callsign) Hong Kong Delivery ATC Clearance will be sent via data-link`
----
+-   You are strongly advised to issue clearance via PDC to maintain radio capacity, use the phraseology `(Callsign) Hong Kong Delivery ATC Clearance will be sent via data-link`
+-   You may use STUP Ground status to indicate traffic that has been sent to the GMC freq.
+--- 
 
 ### For Controller Change of the CDM Master Position
 1.  The previous "**master**" controller uses the command `.cdm slave VHHH`.
