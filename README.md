@@ -22,7 +22,7 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 ### Set Up:
 1.  Go to the **Departure list** and click "**F**."
 2.  Select the required columns:
-    * For **CDC**, select **TSAT, SLOT, ASRT**.
+    * For **CDC**, select **TSAT, SLOT, ARDT**.
 3.  The controller covering **CDC** uses the command `.cdm master VHHH` to activate the system or left-click VHHH on the CDM panel on Euroscope (Click once only and allow it to load for a while).
 
 ---
@@ -32,8 +32,8 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 1.  Issue clearance, by the datalink method is suggested.
 2.  Keep the aircraft on your frequency and ask them to **report ready**. `Pilot should report ready at their TOBT`
 3.  When the traffic has reported ready, check the "**SLOT**" column on the departure list.
-    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ASRT**, then send the traffic to **GMC**.
-    * If the **yellow colour** ($<-5$) is shown, **left-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (time to TSAT in minutes, or basically the value in "SLOT", e.g. 45 for XX:45z), call you back`
+    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ARDT**, then send the traffic to **GMC**.
+    * If the **yellow colour** ($<-5$) is shown, **left-click ARDT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (time to TSAT in minutes, or basically the value in "SLOT", e.g. 45 for XX:45z), call you back`
     * If no value is shown or "**~**" is displayed, use the phraseology `(Callsign) Your TOBT is invalid, update it and report ready again`, alias `.tobt` can be used.
 -   You are strongly advised to issue clearance via PDC to maintain radio capacity, use the phraseology `(Callsign) Hong Kong Delivery ATC Clearance will be sent via data-link`
 -   You may use STUP Ground status to indicate traffic that has been sent to the GMC freq.
