@@ -11,11 +11,11 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 ### Abbreviations
 * **EOBT - Estimated Off-Block Time**: The expected off-block time the pilot files in their flight plan (or Simbrief departure time).
 * **TOBT - Target Off-Block Time**: The target off-block time submitted by the pilot in our **ADGS system**, indicating when they will be ready for pushback (or **EOBT** when **TOBT** is not available).
-* **ASRT - Actual Start-up Request Time**: The time that the pilot requests pushback. **Activating ASRT** will lock the slot (**TSAT**) for the pilot.
+* **ARDT - Actual Ready Time**: The time that the pilot requests pushback. **Activating ARDT will avoid flight plan invalidation at TOBT +5**
 * **TSAT - Target Start-up Approval Time**: The calculated time for the traffic to push back. The valid pushback window will be **TSAT -5** to **TSAT +5 minutes**.
 * **SLOT - Time until offblock slot**: Time remaining until the **TSAT** window. **-8** means 8 minutes until **TSAT**.
 * **TTOT - Target Take Off Time**: The calculated take-off slot for the pilot.
-* **CTOT - Calculated Take Off Time**: The assigned take-off slot for the pilot, usually during large events (e.g., **CTL** or **CTP**) or when nearby airspace or an airport is overloaded and detected by the system to reduce load.
+* **CTOT - Calculated Take Off Time**: The assigned take-off slot for the pilot, usually being issued during large events (e.g., **CTL** or **CTP**), or the system initiates action because of nearby airspace or an airport is overloaded
 
 ---
 
@@ -29,12 +29,12 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 
 ### Procedure:
 ### CDC
-1.  Issue clearance as normal.
-2.  Keep the aircraft on your frequency and ask them to **report ready for push and start**.
+1.  Issue clearance, by the datalink method is suggested.
+2.  Keep the aircraft on your frequency and ask them to **report ready**. `Pilot should report ready at their TOBT`
 3.  When the traffic has reported ready, check the "**SLOT**" column on the departure list.
-    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ASRT**, then send the traffic to **GMC**. (If you see $-6$ on **SLOT**, it is okay to just left-click **ASRT** and send the pilot to **GMC** as it is only 1 minute until their slot.)
-    * If the **yellow colour** ($<-5$) is shown, **right-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (minutes, e.g. 45 for XX:45z), call you back`
-    * If no value is shown or "**~**" is displayed, **right-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (minutes, e.g. 45 for XX:45z), call you back`
+    * If the **green colour** ($-5$ to $+5$) is shown, **left-click ASRT**, then send the traffic to **GMC**.
+    * If the **yellow colour** ($<-5$) is shown, **left-click ASRT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (time to TSAT in minutes, or basically the value in "SLOT", e.g. 45 for XX:45z), call you back`
+    * If no value is shown or "**~**" is displayed, use the phraseology `(Callsign) Your TOBT is invalid, update it and report ready again`, alias `.tobt` can be used.
 -   You are strongly advised to issue clearance via PDC to maintain radio capacity, use the phraseology `(Callsign) Hong Kong Delivery ATC Clearance will be sent via data-link`
 -   You may use STUP Ground status to indicate traffic that has been sent to the GMC freq.
 --- 
@@ -44,6 +44,10 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 2.  Then, the relief controller uses the command `.cdm master VHHH`.
 
 ---
+
+### GMC
+1. Check if the aircraft is within its TSAT window when requesting pushback/start-up.
+2. If not, use the phraseology `(Callsign) Your TOBT is invalid, update it and report ready again`, alias `.tobt` can be used, and revert them to CDC freq.
 
 ### Runway Direction Change
 In case of a runway direction change:
