@@ -13,7 +13,7 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 * **TOBT - Target Off-Block Time**: The target off-block time submitted by the pilot in our **ADGS system**, indicating when they will be ready for pushback (or **EOBT** when **TOBT** is not available).
 * **ARDT - Actual Ready Time**: The time that the pilot requests pushback. **Activating ARDT will avoid flight plan invalidation at TOBT +5**
 * **TSAT - Target Start-up Approval Time**: The calculated time for the traffic to push back. The valid pushback window will be **TSAT -5** to **TSAT +5 minutes**.
-* **SLOT - Time until offblock slot**: Time remaining until the **TSAT** window. **-8** means 8 minutes until **TSAT**.
+* **CDT - Count Down Time CDT**: Time remaining until the **TSAT** window. **-8** means 8 minutes until **TSAT**.
 * **TTOT - Target Take Off Time**: The calculated take-off slot for the pilot.
 * **CTOT - Calculated Take Off Time**: The assigned take-off slot for the pilot, usually being issued during large events (e.g., **CTL** or **CTP**), or the system initiates action because of nearby airspace or an airport is overloaded
 
@@ -21,8 +21,8 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 
 ### Set Up:
 1.  Go to the **Departure list** and click "**F**."
-2.  Select the required columns:
-    * For **CDC**, select **TSAT, SLOT, ARDT**.
+2.  Select the required columns: (If it is not selected)
+    * For **CDC**, select **TSAT, CDT, ARDT**.
 3.  The controller covering **CDC** uses the command `.cdm master VHHH` to activate the system or left-click VHHH on the CDM panel on Euroscope (Click once only and allow it to load for a while).
 
 ---
@@ -31,9 +31,9 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 ### CDC
 1.  Issue clearance, by the datalink method is suggested.
 2.  Keep the aircraft on your frequency and ask them to **report ready**. `Pilot should report ready at their TOBT`
-3.  When the traffic has reported ready, check the "**SLOT**" column on the departure list.
+3.  When the traffic has reported ready, check the "**CDT**" column on the departure list.
     * If the **green colour** ($-5$ to $+5$) is shown, **left-click ARDT**, then send the traffic to **GMC**.
-    * If the **yellow colour** ($<-5$) is shown, **left-click ARDT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (time to TSAT in minutes, or basically the value in "SLOT", e.g. 45 for XX:45z), call you back`
+    * If the **yellow colour** ($<-5$) is shown, **left-click ARDT**, then send the traffic to **GMC** when it becomes green (In TSAT window), you may use the phraseology `(Callsign) expect push at time (time to TSAT in minutes, or basically the value in "CDT", e.g. 45 for XX:45z), call you back`
     * If no value is shown or "**~**" is displayed, use the phraseology `(Callsign) Your TOBT is invalid, update it and report ready again`, alias `.tobt` can be used.
 -   You are strongly advised to issue clearance via PDC to maintain radio capacity, use the phraseology `(Callsign) Hong Kong Delivery ATC Clearance will be sent via data-link`
 -   You may use STUP Ground status to indicate traffic that has been sent to the GMC freq.
@@ -48,6 +48,9 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 ### GMC
 1. Check if the aircraft is within its TSAT window when requesting pushback/start-up.
 2. If not, use the phraseology `(Callsign) Your TOBT is invalid, update it and report ready again`, alias `.tobt` can be used, and revert them to CDC freq.
+
+### Flow Manager
+1. Use command `.cdm atfcm` to activate all flights that requires an action. (With CTOT or FPL suspended)
 
 ### Runway Direction Change
 In case of a runway direction change:
