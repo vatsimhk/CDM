@@ -14,8 +14,8 @@ CDM calculates the runway load using the pilot-submitted **Target Off-block Time
 * **ARDT - Actual Ready Time**: The time that the pilot requests pushback. **Activating ARDT will avoid flight plan invalidation at TOBT +5**
 * **TSAT - Target Start-up Approval Time**: The calculated time for the traffic to push back. The valid pushback window will be **TSAT -5** to **TSAT +5 minutes**.
 * **CDT - Count Down Time CDT**: Time remaining until the **TSAT** window. **-8** means 8 minutes until **TSAT**.
-* **TTOT - Target Take Off Time**: The calculated take-off slot for the pilot.
-* **CTOT - Calculated Take Off Time**: The assigned take-off slot for the pilot, usually being issued during large events (e.g., **CTL** or **CTP**), or the system initiates action because of nearby airspace or an airport is overloaded
+* **TTOT - Target Take Off Time**: The calculated take-off slot for the pilot. Assign by CDM server if nearby airspace or an airport is overloaded
+* **SLOT - Slot**: A fix take-off slot for pilot. Only during event with slot booking.
 
 ---
 
